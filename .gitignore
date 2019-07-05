@@ -1,4 +1,4 @@
 __pycache__/
-domain/
-log/
-result/
+domain/*
+log/*
+result/*
