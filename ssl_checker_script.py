@@ -4,6 +4,7 @@ import time
 import os
 from prettytable import PrettyTable
 
+# Return absolutely path in any OS
 def path_str(absol_path):
 	return os.path.abspath(absol_path)
 
@@ -13,10 +14,10 @@ def ssl_checker_open_domain_list():
 		list_domains = f_read.read().splitlines()
 	return list_domains
 
-#Write result check, start and end time in ../result/result_dd.mm.YYYY.txt
+# Write result check, start and end time in ../result/result.txt
 def ssl_checker_print_result(table_checks):
 	data_format = "%d-%m-%Y %H:%M"
-	with open(path_str('result/result.txt'), 'tw') as f_write:
+	with open(path_str('result/result.txt'), 'w') as f_write:
 		f_write.write("Start check: " + str(date_check_start.strftime(data_format)) + "\n")
 		f_write.write(table_checks.get_string())
 		date_check_end = datetime.datetime.now()
