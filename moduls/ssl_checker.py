@@ -3,17 +3,17 @@ import time
 import os
 from moduls import ssllabs_scanner as ss
 
-def absolute_path(absol_path) -> str:
+def absolute_path(absol_path):
 	'''Return absolutely path in any OS'''
 	return os.path.abspath(absol_path)
 
-def open_domain_list() -> list:
+def open_domain_list():
 	'''Open file ../domain/list_of_domain.txt'''
 	with open(absolute_path('domain/list_of_domain.txt')) as f_read:
 		list_domains = f_read.read().splitlines()
 	return list_domains
 
-def print_result(table_checks, date_check_start) -> None:
+def print_result(table_checks, date_check_start):
 	'''Write result check, start and end time in ../result/result.txt'''
 	data_format = "%d-%m-%Y %H:%M"
 	with open(absolute_path('result/result.txt'), 'w') as f_write:
