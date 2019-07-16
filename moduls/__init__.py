@@ -1,2 +1,2 @@
-import ssl_checker
-import ssllabs_scanner
+import moduls.ssl_checker
+import moduls.ssllabs_scanner
