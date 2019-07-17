@@ -1,6 +1,8 @@
 import datetime
+
 from moduls import ssl_checker as sc
 from prettytable import PrettyTable
+
 
 date_check_start = datetime.datetime.now()
 table_checks = PrettyTable(["Domain", "Status message", "Grade"])
